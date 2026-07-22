@@ -51,7 +51,7 @@ async def start_command(client: Client, message: Message):
             [KeyboardButton("🎮 Start Game", style=ButtonStyle.SUCCESS)],  # Green
             [
                 KeyboardButton("➕ Add to Group", style=ButtonStyle.PRIMARY),  # Blue
-                KeyboardButton("❓ Help", style=ButtonStyle.SECONDARY)  # Grey
+                KeyboardButton("❓ Help", style=ButtonStyle.PRIMARY)  # Grey
             ],
             [KeyboardButton("📊 My Stats", style=ButtonStyle.DANGER)]  # Red
         ],
