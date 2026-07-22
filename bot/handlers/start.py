@@ -46,14 +46,9 @@ async def start_command(client: Client, message: Message):
     """Private chat mein /start command handle karta hai"""
     
     # Reply keyboard with colored buttons (Pyrogram ButtonStyle)
-    reply_keyboard = ReplyKeyboardMarkup(
+    reply_keyboard = InlineKeyboardMarkup(
         [
-            [KeyboardButton("🎮 Start Game", style=ButtonStyle.SUCCESS)],  # Green
-            [
-                KeyboardButton("➕ Add to Group", style=ButtonStyle.PRIMARY),  # Blue
-                KeyboardButton("❓ Help", style=ButtonStyle.PRIMARY)  # Grey
-            ],
-            [KeyboardButton("📊 My Stats", style=ButtonStyle.DANGER)]  # Red
+            [InlineKeyboardButton("➕ Add Me to Group", url=f"https://t.me/{Config.BOT_USERNAME}?startgroup=true", style=ButtonStyle.SUCCESS)],
         ],
         resize_keyboard=True,
         one_time_keyboard=False
